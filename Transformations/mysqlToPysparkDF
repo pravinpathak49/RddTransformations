@@ -1,0 +1,12 @@
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.master('local').appName('Mysql Table Reader').getOrCreate()
+
+#first your pyspark jars should be in spark_jars library
+#also you have to add the $SPARK_HOME/python dir and $SPARK_HOME/python/lib/py4j zip file in settings/ProjectStructure in pycharm
+
+orders = spark.read.format("jdbc").option("url","jdbc:mysql://localhost").\
+    option('dbtable','retail_db.orders').\
+    option('user','root').\
+    option('password','root').load()
+
+print(str(orders.count()))
