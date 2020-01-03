@@ -1,0 +1,38 @@
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.master('local').appName('Mysql Table Reader').getOrCreate()
+
+#first your pyspark jars should be in spark_jars library
+#also you have to add the $SPARK_HOME/python dir and $SPARK_HOME/python/lib/py4j zip file in settings/ProjectStructure in pycharm
+
+# orders = spark.read.format("jdbc").option("url","jdbc:mysql://localhost").\
+#     option('dbtable','retail_db.orders').\
+#     option('user','root').\
+#     option('password','root').load()
+
+#or Directly we can read using spark.read.jdbc
+
+orders = spark.read.jdbc('jdbc:mysql://localhost', 'retail_db.orders', properties={'user': 'root', 'password': 'root'})
+#you also can define number of partition while reading from database.
+#orders = spark.read. jdbc('jdbc:mysql://localhost','retail_db.orders', numPartitions=4, properties={'user': 'root', 'password': 'root'})
+
+#Also you can read the output from query.
+#Note your query should be in parenthesis followed by alias. Reason:- your query will be executed like
+# select * from (your query) a; --> which is valid in mysql
+#better alternative for sqoop.
+
+#orders = spark.read. jdbc('jdbc:mysql://localhost','(select * from orders where order_items_order_id > 500) q', numPartitions=4, properties={'user': 'root', 'password': 'root'})
+
+print(str(orders.count()))
+
+
+
+#if you want to read in pyspark shell then you have to mention the jars files as well while creating spark session
+# pyspark --master yarn \
+#--conf spark.ui.port=12096 \
+#--jars /mysql/jarfile/path
+#--driver /mysql/jarfile/path
+
+#once you get pyspark shell then the same can run there as well
+#orders = spark.read.jdbc('jdbc:mysql://localhost', 'retail_db.orders', properties={'user': 'root', 'password': 'root'})
+
+
