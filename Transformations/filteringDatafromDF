@@ -1,0 +1,31 @@
+DataFrame has two APIs to filter 
+filter
+where
+
+#filtering rows from DF
+dftyped.where(dftyped.order_status == "COMPLETE").show()
+#dftyped.where('order_status = "COMPLETE"').show()
++--------+-------------------+-----------+------------+
+|order_id|         order_date|customer_id|order_status|
++--------+-------------------+-----------+------------+
+|       3|2013-07-25 00:00:00|      12111|    COMPLETE|
+|       5|2013-07-25 00:00:00|      11318|    COMPLETE|
+|       6|2013-07-25 00:00:00|       7130|    COMPLETE|
+|       7|2013-07-25 00:00:00|       4530|    COMPLETE|
+|      15|2013-07-25 00:00:00|       2568|    COMPLETE|
+|      17|2013-07-25 00:00:00|       2667|    COMPLETE|
+|      22|2013-07-25 00:00:00|        333|    COMPLETE|
+|      26|2013-07-25 00:00:00|       7562|    COMPLETE|
+
+
+dftyped.filter(dftyped.order_status == "COMPLETE").show()
+dftyped.filter('order_status = "COMPLETE"').show()
++--------+-------------------+-----------+------------+
+|order_id|         order_date|customer_id|order_status|
++--------+-------------------+-----------+------------+
+|       3|2013-07-25 00:00:00|      12111|    COMPLETE|
+|       5|2013-07-25 00:00:00|      11318|    COMPLETE|
+|       6|2013-07-25 00:00:00|       7130|    COMPLETE|
+|       7|2013-07-25 00:00:00|       4530|    COMPLETE|
+|      15|2013-07-25 00:00:00|       2568|    COMPLETE|
+|      17|2013-07-25 00:00:00|       2667|    COMPLETE|

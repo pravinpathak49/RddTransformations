@@ -1,0 +1,105 @@
+from pyspark.sql.functions import *
+#These can be categorised into String manipulation, Date manipulation, Type casting, Expression such as case when
+
+dftyped.show()
+
++--------+-------------------+-----------+---------------+
+|order_id|         order_date|customer_id|   order_status|
++--------+-------------------+-----------+---------------+
+|       1|2013-07-25 00:00:00|      11599|         CLOSED|
+|       2|2013-07-25 00:00:00|        256|PENDING_PAYMENT|
+|       3|2013-07-25 00:00:00|      12111|       COMPLETE|
+|       4|2013-07-25 00:00:00|       8827|         CLOSED|
+|       5|2013-07-25 00:00:00|      11318|       COMPLETE|
+|       6|2013-07-25 00:00:00|       7130|       COMPLETE|
+|       7|2013-07-25 00:00:00|       4530|       COMPLETE|
+|       8|2013-07-25 00:00:00|       2911|     PROCESSING|
+|       9|2013-07-25 00:00:00|       5657|PENDING_PAYMENT|
+
+
+dftyped.select(substring(dftyped.order_date, 1,7).alias('orderDate')).show()
++---------+
+|orderDate|
++---------+
+|  2013-07|
+|  2013-07|
+|  2013-07|
+|  2013-07|
+|  2013-07|
+|  2013-07|
+|  2013-07|
+|  2013-07|
+|  2013-07|
+|  2013-07|
+|  2013-07|
+
+
+
+dftyped.select(lower(dftyped.order_status).alias('order_status')).show()
+#it will only show that columnwith select function
++---------------+
+|   order_status|
++---------------+
+|         closed|
+|pending_payment|
+|       complete|
+|         closed|
+|       complete|
+|       complete|
+|       complete|
+|     processing|
+|pending_payment|
+|pending_payment|
+
+
+
+dftyped.withColumn('order_status', lower(dftyped.order_status)).show()
+
+#withColumn will show all the other columns along with the processed column
++--------+-------------------+-----------+---------------+
+|order_id|         order_date|customer_id|   order_status|
++--------+-------------------+-----------+---------------+
+|       1|2013-07-25 00:00:00|      11599|         closed|
+|       2|2013-07-25 00:00:00|        256|pending_payment|
+|       3|2013-07-25 00:00:00|      12111|       complete|
+|       4|2013-07-25 00:00:00|       8827|         closed|
+|       5|2013-07-25 00:00:00|      11318|       complete|
+|       6|2013-07-25 00:00:00|       7130|       complete|
+|       7|2013-07-25 00:00:00|       4530|       complete|
+
+
+dftyped.withColumn('order_date', date_format('order_date', 'yyyyMM')).show()
+#using multiple withColumn is also allowed for multiple column transformations
+#dftyped.withColumn('order_date', date_format('order_date', 'yyyyMM')).withColumn('order_status', lower(dftyped.order_status)).show()
+
++--------+----------+-----------+---------------+
+|order_id|order_date|customer_id|   order_status|
++--------+----------+-----------+---------------+
+|       1|    201307|      11599|         closed|
+|       2|    201307|        256|pending_payment|
+|       3|    201307|      12111|       complete|
+|       4|    201307|       8827|         closed|
+|       5|    201307|      11318|       complete|
+|       6|    201307|       7130|       complete|
+|       7|    201307|       4530|       complete|
+
+
+
+
+dftyped.selectExpr('date_format(order_date,"yyyMM") as order_month').show()
++-----------+
+|order_month|
++-----------+
+|     201307|
+|     201307|
+|     201307|
+|     201307|
+|     201307|
+|     201307|
+|     201307|
+|     201307|
+|     201307|
+|     201307|
+|     201307|
+|     201307|
+|     201307|
