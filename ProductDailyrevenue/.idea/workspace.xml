@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8404b402-0b01-4e72-badd-7977c8bff9d0" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1W6bD1gBbPL2YGNv7RUSkrV5xgF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="PerDayProductRevenue" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ProductDailyrevenue" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main/python/PerDayProductRevenue.py" />
+      <option name="PARAMETERS" value="dev" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.PerDayProductRevenue" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8404b402-0b01-4e72-badd-7977c8bff9d0" name="Default Changelist" comment="" />
+      <created>1578472868396</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578472868396</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="457" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578474834366">
+      <screen x="65" y="24" width="1855" height="890" />
+    </state>
+    <state x="457" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog/65.24.1855.890@65.24.1855.890" timestamp="1578474834366" />
+    <state x="704" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578472891146">
+      <screen x="65" y="24" width="1855" height="890" />
+    </state>
+    <state x="704" y="260" key="#com.intellij.fileTypes.FileTypeChooser/65.24.1855.890@65.24.1855.890" timestamp="1578472891146" />
+    <state width="1832" height="391" key="GridCell.Tab.0.bottom" timestamp="1578474861063">
+      <screen x="65" y="24" width="1855" height="890" />
+    </state>
+    <state width="1832" height="391" key="GridCell.Tab.0.bottom/65.24.1855.890@65.24.1855.890" timestamp="1578474861063" />
+    <state width="1832" height="391" key="GridCell.Tab.0.center" timestamp="1578474861060">
+      <screen x="65" y="24" width="1855" height="890" />
+    </state>
+    <state width="1832" height="391" key="GridCell.Tab.0.center/65.24.1855.890@65.24.1855.890" timestamp="1578474861060" />
+    <state width="1832" height="391" key="GridCell.Tab.0.left" timestamp="1578474861059">
+      <screen x="65" y="24" width="1855" height="890" />
+    </state>
+    <state width="1832" height="391" key="GridCell.Tab.0.left/65.24.1855.890@65.24.1855.890" timestamp="1578474861059" />
+    <state width="1832" height="391" key="GridCell.Tab.0.right" timestamp="1578474861062">
+      <screen x="65" y="24" width="1855" height="890" />
+    </state>
+    <state width="1832" height="391" key="GridCell.Tab.0.right/65.24.1855.890@65.24.1855.890" timestamp="1578474861062" />
+    <state x="479" y="91" key="SettingsEditor" timestamp="1578473156408">
+      <screen x="65" y="24" width="1855" height="890" />
+    </state>
+    <state x="479" y="91" key="SettingsEditor/65.24.1855.890@65.24.1855.890" timestamp="1578473156408" />
+  </component>
+</project>
