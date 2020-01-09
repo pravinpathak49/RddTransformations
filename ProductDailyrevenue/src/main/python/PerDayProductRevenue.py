@@ -49,3 +49,5 @@ RankedProductsId = ProductRevenueDaily.select('order_date', 'order_item_product_
 # 4 Select Top n items
 #RankedProductsId.write.csv(path='/home/hduser/Documents/RddTransformations/Output/')
 RankedProductsId.coalesce(1).write.csv(path=props.get(env, 'output.base.dir') +'ProductDailyRevenue')
+
+#spark-submit --master yarn --deploy-mode client --conf spark.ui.port=12901 src/main/python/PerDayProductRevenue.py prod
